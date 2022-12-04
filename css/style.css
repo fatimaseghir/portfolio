@@ -1,0 +1,199 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Tomorrow', sans-serif;
+}
+
+body {
+    background-color: #1B2430;
+    color: #EDEDED;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.project-image {
+    width: 60vw;
+}
+
+.logo {
+    height: 4rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 75vh;
+}
+
+.view-work a {
+    text-decoration: none;
+    color: #EDEDED;
+}
+
+.cont {
+    position: relative;
+    height: 100vh;
+}
+
+button {
+    background: #1B2430;
+    color: #EDEDED;
+    border:  1px solid #EDEDED;
+    position: relative;
+    height: 6rem;
+    padding: 0 3rem;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.55);
+    color: #1B2430;
+}
+
+button:before,button:after {
+    content: '';
+    position: absolute;
+}
+
+.topnav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding-top: 3rem;
+    padding-left: 5rem;
+}
+
+.topnav a {
+    text-decoration: none;
+    color: #EDEDED;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.waves {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height:15vh;
+    margin-bottom:-7px; /*Fix for safari gap*/
+    min-height:100px;
+    max-height:150px;
+}
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px,0,0);
+    }
+    100% {
+        transform: translate3d(85px,0,0);
+    }
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.project {
+    margin-top: 2rem;
+    height: auto;
+    width: 70vw;
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.project-information {
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.about {
+    margin: 2rem;
+    padding: 2rem;
+}
+
+@media only screen and (min-width: 800px) {
+    /* For desktop: */
+    body {
+       font-size: 1rem;
+    }
+
+    button {
+        height: 3rem;
+        padding: 0 1.5rem;
+    }
+    .logo {
+        height: 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .project-container {
+        flex-wrap: wrap;
+        flex-direction: row;
+        /*justify-content: center;*/
+        /*align-items: center;*/
+    }
+
+    .project {
+        margin-top: 1rem;
+        height: auto;
+        width: 30vw;
+        background: rgba(255, 255, 255, 0.35);
+        border-radius: 0.5rem;
+    }
+    .project-image {
+        width: 20vw;
+    }
+
+    .container {
+        flex-wrap: wrap;
+    }
+
+}
